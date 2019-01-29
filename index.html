@@ -25,14 +25,16 @@
 				background-image: url("https://onaliternote.files.wordpress.com/2016/11/wp-1480230666843.jpg");
 				min-height: 100vh;
 				height: 100vh;
+				margin: 0;
 			}
 
 			.bgimg-1 * {
 				opacity: 0.8;
 			}
 
-			.project-carousel {
+			.screen {
 				height: 100vh;
+				padding: 50px 0 0 0;
 			}
 		
 			.jumbotron {
@@ -51,17 +53,21 @@
 		</div>
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-      <span class="navbar-text">
-        Samuel Rider-Leck's Github
-      </span>
       <!-- Toggler/collapsible Button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
+			<a class="navbar-brand" href="#">
+			  Samuel Rider-Leck's Github
+			</a>
       <!-- Links -->
-      <ul class="navbar-nav" id="collapsibleNavbar">
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="#top">Top</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#content2">Content 2</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#projects">Projects</a>
@@ -69,12 +75,11 @@
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link 4</a>
-        </li>
       </ul>
+			</div>
     </nav>
 
+		<div class="screen" id="content1">
 		<div class="container">
 		  <h2>Page Content</h2>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
@@ -97,6 +102,8 @@
 			dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
 		  Aliquam in felis sit amet augue.
 		</div>
+		</div>
+		<div class="screen" id="content2">
 		<hr>
 		<div class="container">
 			<h2>Page Content</h2>
@@ -122,14 +129,17 @@
 			Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
 			dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
 			Aliquam in felis sit amet augue.
+		</div>
 		</div>
 
-		<div class="jumbotron" id="projects">
-			<h2>Projects</h2>
-			<p></p>
-		</div>
-		
+	
+		<div class="screen" id="projects">
 		<div id="project-carousel" class="carousel slide bg-dark" data-ride="carousel" interval="10000">
+			<div class="jumbotron">
+				<h2>Projects</h2>
+				<p></p>
+			</div>
+	
 			<!-- Indicators -->
 			<ul class="carousel-indicators">
 			  <li data-target="#project-carousel" data-slide-to="0" class="active"></li>
@@ -158,8 +168,9 @@
 				<span class="carousel-control-next-icon"></span>
 			</a>
 		</div>
+		</div>
 
-		<div class="container-fluid bg-dark">
+		<div class="container-fluid bg-dark" id="contact">
 			<h2>Page Content</h2>
 			Lorem ipsum sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
 			Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
