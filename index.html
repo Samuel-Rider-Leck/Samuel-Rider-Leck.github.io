@@ -23,6 +23,28 @@
 				scroll-behavior: smooth;
 			}
       
+      @media screen and (max-width: 767px) {
+        h1 {
+          font-size: 10vw;
+        }
+        h2 {
+          font-size: 5vw;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        h1 {
+          font-size: 76px;
+        }
+        h2 {
+          font-size: 38px;
+        }
+      }
+      
+      .vr {
+        max-wisth: 0;
+        border-right: 1px solid black;
+      }
+      
       .gradient1 {
         background-image: linear-gradient(#FFFFFF00, #000);
       }
@@ -49,36 +71,40 @@
 			}
       
       .img-wrapper {
-        max-height:150vh;
         max-width: 850px;
       }
       
       .img-fluid {
-        max-height:100%;
+        max-height: 90%;
       }
     
 			.jumbotron {
 				margin-bottom: 0;
 			}
 		</style>
-	
+    <script type="text/javascript">
+      $(function () {
+          $("[data-toggle='tooltip']").tooltip();
+      });
+    </script>
+  
 	</head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar-main">
     
 		<div class="parallax1 container-fluid h-100 d-flex flex-column align-items-center justify-content-between p-0">
 			<div></div>
 			<div class="text-center text-white">
-				<h1 class="display-1">Samuel<br>Rider-Leck</h1>
+				<h1 class="text-attempt">Samuel<br>Rider-Leck</h1>
 				<h2>Full Stack Developer</h2>
 			</div>
       <div class="d-flex w-100 justify-content-center gradient1" aria-hidden="true">
         <a href="#about">
-          <span class="fa fa-arrow-circle-o-down" style="font-size:48px;color:white;"></span>
+          <span class="fa fa-arrow-circle-o-down" style="font-size:48px;color:white;" data-toggle="tooltip" data-placement="top" title="Scroll Down"></span>
         </a>
       </div>
 		</div>
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top" id="navbar-main">
       <!-- Toggler/collapsible Button -->
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -159,15 +185,16 @@
     
         <!-- Controls -->
         <a class="carousel-control-prev" href="#project-carousel" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
+          <span class="fa fa-angle-left" style="font-size:15vh;color:white;"></span>
         </a>
         <a class="carousel-control-next" href="#project-carousel" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
+          <span class="fa fa-angle-right" style="font-size:15vh;color:white;"></span>
         </a>
       </div>
 		</div>
         
-    <div class="container-fluid img-wrapper h-100 w-100 justify-content-center py-3" id="resume" aria-hidden="true">
+    <div class="container-fluid img-wrapper justify-content-center py-3" id="resume" aria-hidden="true">
+      <h2 class="text-center">Resume</h2>
       <img src="Formatted-Resume-1.jpg" class="img-fluid mx-auto d-block" alt="Samuel Rider-Leck Resume"></img>
       <span class="sr-only">Embedded Resume</span>
       <footer class="blockquote-footer">Last Updated Jan 1st, 2019</footer>
@@ -175,7 +202,7 @@
     
     <div class="d-flex justify-content-center gradient2" aria-hidden="true">
     	<a href="#">
-				<span class="fa fa-arrow-circle-o-up" style="font-size:48px;color:black;"></span>
+				<span class="fa fa-arrow-circle-o-up" style="font-size:48px;color:black;" data-toggle="tooltip" data-placement="top" title="Scroll To Top"></span>
 			</a>
     </div>
 
@@ -183,18 +210,25 @@
       <div class="py-sm-3 w-100 text-center">
         Let's Talk!
       </div>
-      <div class="row py-3">        
-        <div class="col-sm-3 py-1 py-sm-0 text-center">
-          Contact by<br><a href="mailto:samuelriderleck@gmail.com">EMAIL</a>
+      <div class="row px-0 px-sm-4 justify-content-center">
+        <div class="col-sm py-2 py-sm-4 text-center">
+          Contact by<br>
+          <a href="mailto:samuelriderleck@gmail.com">EMAIL</a>
         </div>
-        <div class="col-sm-3 py-1 py-sm-0 text-center">
-          See my<br><a href="">LINKEDIN</a>
+        <div class="vr hidden-sm-down"></div>
+        <div class="col-sm py-2 py-sm-4 text-center">
+          See my<br>
+          <a href="">LINKEDIN</a>
         </div>
-        <div class="col-sm-3 py-1 py-sm-0 text-center">
-          Made with<br><a href="https://getbootstrap.com/">Bootstrap 4</a>
+        <div class="vr hidden-sm-down"></div>
+        <div class="col-sm py-2 py-sm-4 text-center">
+          Made with<br>
+          <a href="https://getbootstrap.com/">Bootstrap 4</a>
         </div>
-        <div class="col-sm-3 py-1 py-sm-0 text-center">
-          Icons by<br><a href="https://fontawesome.com/">Font Awesome</a>
+        <div class="vr hidden-sm-down"></div>
+        <div class="col-sm py-2 py-sm-4 text-center">
+          Icons by<br>
+          <a href="https://fontawesome.com/">Font Awesome</a>
         </div>
       </div>
 		</div>
